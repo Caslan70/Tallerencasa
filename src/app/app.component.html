@@ -1,0 +1,53 @@
+<mat-toolbar color="warn">
+  Angular Material
+</mat-toolbar>
+
+<main>
+  <mat-card>
+     <form action="">
+       <img width="120" alt="Angular Logo" src="https://angular.io/assets/images/logos/angular/angular.png">
+       <mat-form-field>
+        <input type="text" matInput placeholder="title">
+       </mat-form-field>
+       <mat-form-field>
+         <mat-select placeholder="Album Id" #albumId>
+           <mat-option *ngFor="let id of albumsId" value="id">
+            {{id}}
+           </mat-option>
+         </mat-select>
+       </mat-form-field>
+       <mat-form-field>
+         <input type="text" matInput placeholder="URL" #url>
+       </mat-form-field>
+       <button mat-button mat-flat-button color="warn" style="display:block; width: 100%">
+         Save
+       </button>
+     </form>
+  </mat-card>
+  <mat-card>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1">Option 1</mat-radio-button>
+      <mat-radio-button value="2">Option 2</mat-radio-button>
+    </mat-radio-group><br/><br/>
+    <mat-checkbox>Check me!</mat-checkbox><br/><br/>
+    <mat-slider min="1" max="5" step="0.5" value="2.5"></mat-slider>
+    
+<mat-form-field>
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+  </mat-card>
+
+  <mat-card>
+      <mat-slide-toggle>Slide me!</mat-slide-toggle>      
+  </mat-card>
+
+  <app-photos>
+    
+  </app-photos>
+   
+</main>
